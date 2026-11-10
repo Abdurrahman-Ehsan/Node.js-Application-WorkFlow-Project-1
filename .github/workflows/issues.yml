@@ -1,0 +1,10 @@
+name: issues response
+on: issues
+jobs:
+  respond-to-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Respond to new issues
+        run: echo "Thank you for opening an issue! We will review it shortly"
+      - name: Displaying events on issue placement
+        run: echo "${{toJSON(github.event)}}"
